@@ -12,9 +12,13 @@ public class Calidad {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private LocalDate fecha;
+	@Column(name = "racimos_verdes")
 	private Integer racimosVerdes;
+	@Column(name = "racimos_sobremaduros")
 	private Integer racimosSobremaduros;
+	@Column(name = "racimos_pedunculo_largo")
 	private Integer racimosPedunculoLargo;
+	@Column(name = "racimos_podridos")
 	private Integer racimosPodridos;
 	private String impurezas;
 

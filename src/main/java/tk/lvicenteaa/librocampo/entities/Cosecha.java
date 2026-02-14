@@ -12,8 +12,11 @@ public class Cosecha {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private LocalDate fecha;
+	@Column(name = "numero_racimos")
 	private Integer numeroRacimos;
+	@Column(name = "peso_total")
 	private Double pesoTotal;
+	@Column(name = "precio_venta")
 	private Double PrecioVenta;
 
 	@ManyToOne

@@ -14,6 +14,7 @@ public class Finca {
 	private Long id;
 	private String nombre;
 	private Double area;
+	@Column(name = "area_palma")
 	private Double areaPalma;
 	private String asociacion;
 	private String plano;

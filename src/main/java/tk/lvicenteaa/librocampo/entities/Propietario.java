@@ -16,8 +16,10 @@ public class Propietario {
 	private String nombres;
 	private String apellidos;
 	private String noCedula;
-	private String expedicion_Cedula;
+	@Column(name = "expedicion_cedula")
+	private String expedicionCedula;
 	private String telefono;
+	@Column(name = "fecha_nacimiento")
 	private LocalDate fechaNacimiento;
 	private String email;
 
@@ -30,18 +32,18 @@ public class Propietario {
 	 * @param nombres
 	 * @param apellidos
 	 * @param noCedula
-	 * @param expedicion_Cedula
+	 * @param expedicionCedula
 	 * @param telefono
 	 * @param fechaNacimiento
 	 * @param email
 	 */
-	public Propietario(Long id, String nombres, String apellidos, String noCedula, String expedicion_Cedula,
+	public Propietario(Long id, String nombres, String apellidos, String noCedula, String expedicionCedula,
 			String telefono, LocalDate fechaNacimiento, String email) {
 		this.id = id;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.noCedula = noCedula;
-		this.expedicion_Cedula = expedicion_Cedula;
+		this.expedicionCedula = expedicionCedula;
 		this.telefono = telefono;
 		this.fechaNacimiento = fechaNacimiento;
 		this.email = email;
@@ -51,28 +53,28 @@ public class Propietario {
 	 * @param nombres
 	 * @param apellidos
 	 * @param noCedula
-	 * @param expedicion_Cedula
+	 * @param expedicionCedula
 	 * @param telefono
 	 * @param fechaNacimiento
 	 * @param email
 	 */
-	public Propietario(String nombres, String apellidos, String noCedula, String expedicion_Cedula, String telefono,
+	public Propietario(String nombres, String apellidos, String noCedula, String expedicionCedula, String telefono,
 			LocalDate fechaNacimiento, String email) {
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.noCedula = noCedula;
-		this.expedicion_Cedula = expedicion_Cedula;
+		this.expedicionCedula = expedicionCedula;
 		this.telefono = telefono;
 		this.fechaNacimiento = fechaNacimiento;
 		this.email = email;
 	}
 
-	public Propietario(Long id, String nombres, String apellidos, String noCedula, String expedicion_Cedula, String telefono, LocalDate fechaNacimiento, String email, List<Finca> fincas) {
+	public Propietario(Long id, String nombres, String apellidos, String noCedula, String expedicionCedula, String telefono, LocalDate fechaNacimiento, String email, List<Finca> fincas) {
 		this.id = id;
 		this.nombres = nombres;
 		this.apellidos = apellidos;
 		this.noCedula = noCedula;
-		this.expedicion_Cedula = expedicion_Cedula;
+		this.expedicionCedula = expedicionCedula;
 		this.telefono = telefono;
 		this.fechaNacimiento = fechaNacimiento;
 		this.email = email;
@@ -144,15 +146,15 @@ public class Propietario {
 	/**
 	 * @return the expedicion_Cedula
 	 */
-	public String getExpedicion_Cedula() {
-		return expedicion_Cedula;
+	public String getExpedicionCedula() {
+		return expedicionCedula;
 	}
 
 	/**
-	 * @param expedicion_Cedula the expedicion_Cedula to set
+	 * @param expedicionCedula the expedicion_Cedula to set
 	 */
-	public void setExpedicion_Cedula(String expedicion_Cedula) {
-		this.expedicion_Cedula = expedicion_Cedula;
+	public void setExpedicionCedula(String expedicionCedula) {
+		this.expedicionCedula = expedicionCedula;
 	}
 
 	/**

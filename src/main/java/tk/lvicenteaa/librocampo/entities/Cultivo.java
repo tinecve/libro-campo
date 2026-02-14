@@ -17,10 +17,12 @@ public class Cultivo {
 	private Double ancho;
 	private Double largo;
 	private String mapeo;
+	@Column(name = "inicio_siembra")
 	private LocalDate inicioSiembra;
 
 	@JsonIgnore
 	@OneToMany
+	@Column(name = "plan_fertilizantes")
 	private List<PlanFertilizante> planFertilizantes;
 	@ManyToOne
 	private Finca finca;

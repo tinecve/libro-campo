@@ -24,7 +24,6 @@ public class CalidadController {
 	private CalidadService calidadService;
 	
 
-	
 	@GetMapping
 	public List<Calidad> findAll(){
 		return this.calidadService.mostrarTodos();

@@ -9,8 +9,11 @@ public class PlanFertilizante {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column(name = "clase_fertilizante")
 	private String claseFertilizante;
+	@Column(name = "numero_bultos")
 	private Integer numeroBultos;
+	@Column(name = "gramos_palma")
 	private Integer gramosPalma;
 
 	@ManyToOne
